@@ -1,10 +1,11 @@
 {
   "name": "react-primitives-google-static-map",
-  "version": "0.1.8",
+  "version": "0.0.0",
   "description": "A wrapper for Google's Static Maps",
   "main": "lib/GoogleStaticMap.js",
   "scripts": {
-    "build": "babel ./src --out-dir ./lib --ignore __tests__/*"
+    "build": "babel ./src --out-dir ./lib --ignore __tests__/*",
+    "release": "np"
   },
   "repository": {
     "type": "git",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.0",
     "babel-core": "^6.24.0",
-    "babel-preset-airbnb": "^2.2.3"
+    "babel-preset-airbnb": "^2.2.3",
+    "np": "^2.13.1"
   }
 }
