@@ -5,7 +5,8 @@
   "main": "lib/GoogleStaticMap.js",
   "scripts": {
     "build": "babel ./src --out-dir ./lib --ignore __tests__/*",
-    "release": "np"
+    "release": "np",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
