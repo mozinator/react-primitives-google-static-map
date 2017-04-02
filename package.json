@@ -1,11 +1,14 @@
 {
-  "name": "react-native-google-static-map",
+  "name": "react-primitives-google-static-map",
   "version": "0.1.8",
   "description": "A wrapper for Google's Static Maps",
-  "main": "GoogleStaticMap.js",
+  "main": "lib/GoogleStaticMap.js",
+  "scripts": {
+    "build": "babel ./src --out-dir ./lib --ignore __tests__/*"
+  },
   "repository": {
     "type": "git",
-    "url": "git@github.com:yelled3/react-native-google-static-map.git"
+    "url": "git@github.com:jongold/react-primitives-google-static-map.git"
   },
   "files": [
     "GoogleStaticMap.js",
@@ -16,8 +19,18 @@
     "react-native",
     "ios"
   ],
-  "author": "Adam Farhi <yelled3@gmail.com> (https://github.com/yelled3)",
-  "peerDependencies": {
-    "react-native": ">=0.6.0"
+  "author": "Jon Gold <hello@designedbygold.com> (http://jon.gold)",
+  "dependencies": {
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2",
+    "react-native": ">=0.6.0",
+    "react-primitives": "^0.3.4",
+    "react-sketchapp": "^0.9.1",
+    "react-test-renderer": "^15.4.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.0",
+    "babel-core": "^6.24.0",
+    "babel-preset-airbnb": "^2.2.3"
   }
 }
