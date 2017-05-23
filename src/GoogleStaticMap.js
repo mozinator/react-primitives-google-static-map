@@ -94,8 +94,17 @@ class GoogleStaticMap extends Component {
 
     let allMarkers = markers;
     if (hasCenterMarker) { allMarkers.push({ latitude, longitude }) }
-    return allMarkers.map(({ latitude, longitude}) =>
-      `markers=${latitude},${longitude}`
+    return allMarkers.map(({ label, color, latitude, longitude}) => {
+      var r = "markers="
+      if(color) {
+        r += "color:"+color+"%7C";
+      }
+      if(label) {
+        r += 'label:'+label+"%7C";
+      }
+      r += `${latitude},${longitude}`
+      return r;
+    }
     ).join('&')
 
     // const markerParams = `markers=${latitude},${longitude}`;
